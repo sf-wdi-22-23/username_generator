@@ -30,8 +30,6 @@ We'll use a tool called `rspec`  to outline our objectives AND test our code as 
 gem install rspec
 ```
 
-You might get an error here, but we believe in you. Fix it.
-
 ### Test Driven Development -- Red, Green, Refactor.
 Take a look inside the `/spec` folder, and you'll see our test suite broken up into 2 files.
 - /spec/the_warmup_spec.rb
