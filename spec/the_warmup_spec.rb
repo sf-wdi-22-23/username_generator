@@ -22,15 +22,15 @@ end
 
 describe "#first_char" do
   it "returns the first letter of the word" do
-    expect( first_char("ilias") ).to eq "i"
-    expect( first_char("justin") ).to eq "j"
-    expect( first_char("nathan") ).to eq "n"
+    expect( first_char("juliana") ).to eq "j"
+    expect( first_char("braus") ).to eq "b"
+    expect( first_char("matt") ).to eq "m"
   end
 
   it "lowercases the first letter of the word" do
-    expect( first_char("Ilias") ).to eq "i"
-    expect( first_char("Justin") ).to eq "j"
-    expect( first_char("Nathan") ).to eq "n"
+    expect( first_char("Juliana") ).to eq "j"
+    expect( first_char("Braus") ).to eq "b"
+    expect( first_char("Matt") ).to eq "m"
   end
 end
 
