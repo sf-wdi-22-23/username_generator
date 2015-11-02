@@ -6,33 +6,33 @@ require "./username.rb"
 describe "#format_name" do
 
   it "combines the first letter of the first name with the last name" do
-    expect( format_name("nathan", "allen") ).to eq "nallen"
-    expect( format_name("justin", "castilla") ).to eq "jcastilla"
-    expect( format_name("ilias", "tsangaris") ).to eq "itsangaris"
+    expect( format_name("juliana", "lopker") ).to eq "jlopker"
+    expect( format_name("adam", "braus") ).to eq "abraus"
+    expect( format_name("matt", "villwock") ).to eq "mvillwock"
   end
 
   it "returns a lowercase string" do
-    expect( format_name("Nathan", "Allen") ).to eq "nallen"
-    expect( format_name("Justin", "Castilla") ).to eq "jcastilla"
-    expect( format_name("ILIAS", "TSANGARIS") ).to eq "itsangaris"
+    expect( format_name("Juliana", "Lopker") ).to eq "jlopker"
+    expect( format_name("Adam", "Braus") ).to eq "abraus"
+    expect( format_name("MATT", "VILLWOCK") ).to eq "mvillwock"
   end
 
   it "removes extraneous whitespace" do
-    expect( format_name("nathan" , " allen ") ).to eq "nallen"
-    expect( format_name(" justin " , "castilla") ).to eq "jcastilla"
+    expect( format_name("juliana" , " lopker ") ).to eq "jlopker"
+    expect( format_name(" adam " , "braus") ).to eq "abraus"
     expect( format_name("mary lou", "smith jones") ).to eq "msmithjones"
   end
 
   it "handles empty strings" do
-    expect( format_name("nathan", "") ).to eq nil
+    expect( format_name("juliana", "") ).to eq nil
     expect( format_name("", "") ).to eq nil
-    expect( format_name("", "allen") ).to eq nil
+    expect( format_name("", "lopker") ).to eq nil
   end
 
   it "removes special characters in strings (BONUS)" do
-    expect( format_name("Nathan", "Allen!") ).to eq "nallen"
-    expect( format_name(" Ilias ", "%20Tsangaris") ).to eq "itsangaris"
-    expect( format_name("'Justin'", "Ca-sti-lla.") ).to eq "jcastilla"
+    expect( format_name("Juliana", "Lopker!") ).to eq "jlopker"
+    expect( format_name(" Matt ", "%20Villwock") ).to eq "mvillwock"
+    expect( format_name("'Adam'", "Br-a-us.") ).to eq "abraus"
   end
 
 end
